@@ -2,7 +2,6 @@
 
 [![Python 3.9+](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.12+-ee4c2c.svg)](https://pytorch.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This repository contains the official PyTorch implementation for **PeleSENet**, a novel lightweight hybrid Convolutional Neural Network (CNN) for skin cancer classification, as presented in the paper "PeleSENet: A Cutting-Edge Hybrid CNN for Enhanced Skin Cancer Detection with ΧΑΙ and Adaptive Learning".
 
@@ -60,16 +59,6 @@ PeleSENet was trained and evaluated on a subset of the **ISIC 2018 dataset**. Th
 
 ## 🛠️ Setup and Installation
 
-To get started with this project, clone the repository and install the required dependencies.
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/your-username/PeleSENet.git
-cd PeleSENet
-
-# 2. Install the required packages
-pip install -r requirements.txt
-```
 
 **Dataset:**
 Download the ISIC dataset and organize it into `train` and `test` folders, with `benign` and `malignant` subdirectories inside each.
@@ -90,43 +79,8 @@ data/
         └── ...
 ```
 
-## 🚀 Usage
-
-### Training
-
-To train the PeleSENet model from scratch, run the `train.py` script. The best model weights will be saved automatically.
-
-```bash
-python train.py --data_dir ./data --epochs 35 --batch_size 32
-```
-
-### Prediction
-
-To run a prediction on a single image and generate a Grad-CAM heatmap, use the `predict.py` script.
-
-```bash
-python predict.py --image_path /path/to/your/image.jpg --model_path /path/to/best_model.pth
-```
-
-## 📜 Citation
-
-If you use PeleSENet or this framework in your research, please cite the original paper:
-
-```bibtex
-@article{Chin2024PeleSENet,
-  title   = {PeleSENet: A Cutting-Edge Hybrid CNN for Enhanced Skin Cancer Detection with XAI and Adaptive Learning},
-  author  = {Chin, Kian Lok},
-  journal = {Faculty of Information Technology, Monash University Malaysia},
-  year    = {2024},
-  url     = {https://github.com/your-username/PeleSENet}
-}
-```
 
 ## 🙏 Acknowledgments
 
 *   This work is based on the architectures of [PeleeNet](https://arxiv.org/abs/1804.06882) and [SE-ResNet](https://arxiv.org/abs/1709.01507).
 *   The dataset used for this project is a subset of the [ISIC (International Skin Imaging Collaboration) archive](https://challenge.isic-archive.com/data/). We thank the organizers for making this valuable dataset publicly available.
-
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
